@@ -7,7 +7,9 @@ class App < Sinatra::Base
   end
 
   post '/food' do
-
+    @name = params[:name]
+    @food = params[:favorite_food]
+    "Your name is #{@name}, and your favorite food is #{@food}"
   end
 
 end
